@@ -6,8 +6,7 @@ import { PortfolioOverviewComponent } from './pages/portfolio-overview/portfolio
 import { ContactComponent } from './pages/contact/contact.component';
 import { PricingComponent } from './pages/pricing/pricing.component';
 export const routes: Routes = [
-    //{ path: '', component: IndexComponent },
-    { path: 'index', component: IndexComponent },
+    { path: '', component: IndexComponent },
     { path: 'about', component: AboutComponent },
     { path: 'portfolio-item', component: PortfolioItemComponent },
     { path: 'portfolio-overview', component: PortfolioOverviewComponent },
