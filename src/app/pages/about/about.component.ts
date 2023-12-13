@@ -24,6 +24,5 @@ export class AboutComponent {
   }
 
   strTitle:string = "Creado por Usuarios, Para Usuarios: La Historia de Netflix"
-  strInfo:string = 'Descubre la historia detrás de la plataforma que ha transformado la forma en que consumimos entretenimiento. Desde su fundación por Reed Hastings y Marc Randolph hasta su expansión global, exploraremos cómo Netflix ha mantenido su compromiso de ofrecer contenido diverso y
-   de calidad.'
+  strInfo:string = "Descubre la historia detrás de la plataforma que ha transformado la forma en que consumimos entretenimiento. Desde su fundación por Reed Hastings y Marc Randolph hasta su expansión global, exploraremos cómo Netflix ha mantenido su compromiso de ofrecer contenido diverso y de calidad."
 }
