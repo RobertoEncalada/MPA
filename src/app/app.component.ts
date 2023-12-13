@@ -10,7 +10,7 @@ import { NetflixService } from './providers/netflix.service';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [CommonModule, RouterOutlet,NavbarComponent,FooterComponent,IndexComponent,HttpClientModule],
+  imports: [CommonModule, RouterOutlet,NavbarComponent,IndexComponent,FooterComponent,HttpClientModule],
   providers: [NetflixService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
