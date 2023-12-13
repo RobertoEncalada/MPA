@@ -5,7 +5,6 @@ import { NavbarComponent } from './shared/navbar/navbar.component'
 import { FooterComponent } from './shared/footer/footer.component'
 import { IndexComponent } from './pages/index/index.component';
 import { HttpClientModule } from  '@angular/common/http';
-import { Netflix } from './interfaces/netflix';
 import { NetflixService } from './providers/netflix.service';
 
 @Component({
