@@ -15,7 +15,7 @@ export class AboutComponent {
   public data : Netflix[] = [];
   constructor(private dataProvider: NetflixService) { }
   title = 'mpa';
-
+  fotoFundadores = "assets/img/aboutFundadores";
   ngOnInit() {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Netflix[]); 
