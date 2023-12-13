@@ -16,6 +16,6 @@ import { NetflixService } from './providers/netflix.service';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'MPA';
+  title = 'mpa';
 
 }
