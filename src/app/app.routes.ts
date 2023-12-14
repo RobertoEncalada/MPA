@@ -1,5 +1,4 @@
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
+import { Routes } from '@angular/router';
 
 import { IndexComponent } from './pages/index/index.component';
 import { AboutComponent } from './pages/about/about.component';
@@ -14,11 +13,5 @@ export const routes: Routes = [
     { path: 'portfolio-overview', component: PortfolioOverviewComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'pricing', component: PricingComponent},
-    { path: '**', redirectTo: 'index'}
+    { path: '', redirectTo: 'index'}
 ];
-
-@NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
-  })
-export class AppRoutingModule { }
