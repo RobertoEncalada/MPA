@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-index',
@@ -9,5 +10,10 @@ import { CommonModule } from '@angular/common';
   styleUrl: './index.component.css'
 })
 export class IndexComponent {
+  constructor(private titleService: Title) { }
+  title = 'Creado por Usuarios, Para Usuarios';
+  ngOnInit() {
+      this.titleService.setTitle('Netflix');
+  }
 
 }

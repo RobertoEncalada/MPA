@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-contact',
@@ -9,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './contact.component.css'
 })
 export class ContactComponent {
-
+  constructor(private titleService: Title) { }
+  ngOnInit() {
+      this.titleService.setTitle('Contacto');
+  }
+  
 }

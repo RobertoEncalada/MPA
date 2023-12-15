@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-portfolio-item',
@@ -9,5 +10,9 @@ import { CommonModule } from '@angular/common';
   styleUrl: './portfolio-item.component.css'
 })
 export class PortfolioItemComponent {
+  constructor(private titleService: Title) { }
+  ngOnInit() {
+      this.titleService.setTitle('Portafolio-item');
+  }
 
 }

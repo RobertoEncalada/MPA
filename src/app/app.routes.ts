@@ -13,5 +13,5 @@ export const routes: Routes = [
     { path: 'portfolio-overview', component: PortfolioOverviewComponent },
     { path: 'contact', component: ContactComponent },
     { path: 'pricing', component: PricingComponent},
-    //{ path: '', redirectTo: 'index'}
+    { path: '**', redirectTo: 'index'}
 ];
