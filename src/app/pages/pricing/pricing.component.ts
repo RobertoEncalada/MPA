@@ -12,7 +12,9 @@ import { Title } from '@angular/platform-browser';
 export class PricingComponent {
   constructor(private titleService: Title) { }
   ptittle = 'Planes y precios';
+  subtittle ='Selecciona el plan ideal para ti';
   ngOnInit() {
       this.titleService.setTitle('Planes y Precios');
   }
+
 }
