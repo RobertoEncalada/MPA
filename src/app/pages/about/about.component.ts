@@ -14,15 +14,30 @@ import { NetflixService } from '../../providers/netflix.service';
 })
 export class AboutComponent {
   public data : Netflix[] = [];
+
+  public filteredData: Netflix[] = [];
+  public filterType: string = 'all'; // In
+
   constructor(private dataProvider: NetflixService, private titleService: Title) { }
   title = 'mpa';
   ngOnInit() {
     this.dataProvider.getResponse().subscribe((response) => { 
       let dataArray = (response as Netflix[]); 
       this.data = dataArray.slice(0,10);
+      this.filteredData = this.data;
 
       this.titleService.setTitle('Acerca de');
     })
+  }
+
+  applyFilter() {
+    if (this.filterType === 'all') {
+      // Si el tipo es 'all', muestra todos los datos
+      this.filteredData = this.data;
+    } else {
+      // Filtra los datos por tipo
+      this.filteredData = this.data.filter(item => item.type === this.filterType);
+    }
   }
   
 }

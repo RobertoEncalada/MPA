@@ -6,6 +6,10 @@ table {
     margin-bottom: 10px;
 }
 
+#tablet{
+    position: center;
+}
+
 th, td {
     border: 1px solid #000000;
     padding: 10px;
