@@ -74,40 +74,49 @@
             </div>
         </section>
         <section>
-
+            
             <div class="row row-cols-1 row-cols-md-1 g-3 mt-2">
                 <div class="col">
                     <div class="card">
                         <div class="card-body">
                             <div class="text-center">
-                                <h2 class="fw-bolder">Tv Show and Movies </h2>
+                              <h2 class="fw-bolder">Tv Show and Movies</h2>
                             </div>
-                            <table>
-                                <thead class="bg-light">
-                                    <tr>
-                                        <th>Título</th>
-                                        <th>Tipo</th>
-                                        <th>Fecha</th>
-                                        <th>Descripción</th>
-                
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    @for (datum of data; track datum) {
-                                    <tr>      
-                                        <th> {{  datum[ "title" ]  }}  </th>
-                                        <td> {{  datum[ "type" ]  }} </td>
-                                        <td> {{  datum[ "date_added" ]  }}  </td>
-                                        <td> {{  datum[ "description" ]  }} </td>
-                                    </tr>
-                                    } @empty {
-                                    <tr>
-                                        <td colspan="4" class="text-center">Aún no hay datos</td>
-                                    </tr>
-                                    }
-                                </tbody>
+                            <div class="row justify-content-end row-cols-6 row-cols-md-6 g-3 mt-2">
+                              <div class="col">
+                                <select id="tipo" class="form-select form-select-lg mb-3" aria-label="Default select example" [(ngModel)]="filterType" (change)="applyFilter()">
+                                  <option value="all" selected>Tipo</option>
+                                  <option value="Movie">Movie</option>
+                                  <option value="TV Show">TV Show</option>
+                                </select>
+                              </div>
+                            </div>
+                            <table *ngIf="filteredData.length > 0; else noData">
+                              <thead class="bg-light">
+                                <tr>
+                                  <th>Título</th>
+                                  <th>Tipo</th>
+                                  <th>Fecha</th>
+                                  <th>Descripción</th>
+                                </tr>
+                              </thead>
+                              <tbody id="tabla">
+                                <tr *ngFor="let datum of filteredData">
+                                  <th>{{ datum.title }}</th>
+                                  <td>{{ datum.type }}</td>
+                                  <td>{{ datum.date_added }}</td>
+                                  <td>{{ datum.description }}</td>
+                                </tr>
+                              </tbody>
                             </table>
-                        </div>
+                            <ng-template #noData>
+                              <table>
+                                <tr>
+                                  <td colspan="4" class="text-center">Aún no hay datos</td>
+                                </tr>
+                              </table>
+                            </ng-template>
+                          </div>
                     </div>
                 </div>
             </div>
