@@ -30,25 +30,25 @@ export class PortfolioOverviewComponent {
       imgSrc: 'assets/img/admiperfiles.jpg',
       altText: 'Administrar Perfiles',
       title: 'Administrar Perfiles',
-      link: '#!'
+      link: 'https://help.netflix.com/es/node/10421'
     },
     {
       imgSrc: 'assets/img/perfilNinos.jpg',
       altText: 'Perfiles Niños',
       title: 'Perfiles Niños',
-      link: '#!'
+      link: 'https://help.netflix.com/es/node/114275'
     },
     {
       imgSrc: 'assets/img/disposi4.jpg',
-      altText: 'Límite de Dispositivos',
-      title: 'Límite de Dispositivos',
-      link: '#!'
+      altText: 'Dispositivos Compatibles',
+      title: 'Dispositivos Compatibles',
+      link: 'https://help.netflix.com/es/node/14361'
     },
     {
       imgSrc: 'assets/img/categoria.jpg',
       altText: 'Varias Categorias',
       title: 'Varias Categorias',
-      link: '#!'
+      link: 'https://help.netflix.com/es/node/2064'
     }
   ];
 }
